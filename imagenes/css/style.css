@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    color: #222;
+    line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+    url("../imagenes/fondo.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background: #2e7d32;
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #256428;
+}
+
+/* SECTIONS */
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 25px;
+}
+
+.section.gray {
+    background: #f4f6f5;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* FEATURES */
+.features {
+    max-width: 700px;
+    margin: auto;
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.features li {
+    padding: 10px 0;
+}
+
+/* CONTACT */
+.contact {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    margin-top: 25px;
+    background: #25d366;
+    color: white;
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+}
+
+/* GALERIA DE IMAGENES */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 35px;
+    margin-top: 45px;
+}
+
+
+.gallery img {
+    width: 100%;
+    height: 320px;   /* más grandes */
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+    transition: transform 0.35s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.06);
+}
+
+/* GALERIA DE VIDEOS */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.video-gallery video {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* SOBRE EL PROYECTO */
+.info-box {
+    max-width: 850px;
+    margin: 30px auto 0;
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    font-size: 1.1rem;
+}
+
+/*DATOS GENERALES*/
+.datos-generales {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.dato-card:nth-child(5) {
+    grid-column: 2;
+}
+
+/* Colocar Entrega debajo de Cuotas */
+.dato-card:nth-child(6) {
+    grid-column: 3;
+}
+
+.dato-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.dato-card:hover {
+    transform: translateY(-6px);
+}
+
+.dato-card img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.dato-card h4 {
+    color: #1b5e20; /* verde empresa */
+    margin-bottom: 8px;
+}
+
+.dato-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.section {
+    position: relative;
+}
+
+.section::before,
+.section::after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    width: 12px;               /* más gruesas */
+    height: 120%;              /* más altas */
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #2e7d32,
+        transparent
+    );
+    opacity: 0.35;             /* más visibles */
+}
+
+.section::before {
+    left: -90px;               /* más hacia el centro */
+}
+
+.section::after {
+    right: -90px;
+}
